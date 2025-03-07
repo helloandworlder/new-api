@@ -12,7 +12,7 @@ services:
       - ./data:/data
       - ./logs:/app/logs
     environment:
-      - REDIS_CONN_STRING=redis://redis
+      - REDIS_CONN_STRING=redis://127.0.0.1
       - TZ=Asia/Shanghai
     depends_on:
       - redis
