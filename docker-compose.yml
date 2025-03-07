@@ -11,9 +11,7 @@ services:
     volumes:
       - ./data:/data
       - ./logs:/app/logs
-      - ./data/sqlite:/data/sqlite  # 添加SQLite数据库文件的挂载
     environment:
-      - SQL_DSN=sqlite3:/data/sqlite/new-api.db  # 修改为SQLite的连接字符串
       - REDIS_CONN_STRING=redis://redis
       - TZ=Asia/Shanghai
     depends_on:
